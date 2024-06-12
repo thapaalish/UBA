@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Login</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: sans-serif;
+
+        background: #fffdfd;
+      }
+
+      .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 0.1rem solid white;
+        border-radius: 0.5rem;
+        height: 60vh;
+        background-color: #fff;
+        padding: 0rem 1.5rem;
+        transition: transform 0.2s;
+        width: 30vw;
+        text-align: center;
+      }
+
+      label {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        text-align: left;
+        color: #555;
+        font-weight: bold;
+      }
+
+      input {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      button {
+        padding: 15px;
+        border-radius: 10px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        border: none;
+        color: white;
+        cursor: pointer;
+        background-color: #4caf50;
+        width: 100%;
+        font-size: 16px;
+      }
+
+      .wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Login</h1>
+
+      <form action="">
+        <label for="first"> Username: </label>
+        <input
+          type="text"
+          id="first"
+          name="first"
+          placeholder="Enter your Username"
+          required
+        />
+
+        <label for="password"> Password: </label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter your Password"
+          pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])\S{8,}$"
+          title="Password must contain at least one number, 
+               one alphabet, one symbol, and be at 
+               least 8 characters long"
+          required
+        />
+
+        <div class="wrap">
+          <button type="submit" onclick="solve()">Login</button>
+        </div>
+      </form>
+      <p>
+        Not registered?
+        <a href="#" style="text-decoration: none"> Create an account </a>
+      </p>
+    </div>
+  </body>
+</html>
